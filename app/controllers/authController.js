@@ -6,25 +6,29 @@ const MongoDB = require('../utils/mongodb.util')
 exports.register = async(req, res) => {
     const {username, password, password_confirm} = req.body;
     if(!username || !password || !password_confirm) {
-        res.json({
-            status: "bad",
-            message: "Username và Password không được để trống"
+        return res.status(422).json({
+            message: "Username hoặc Password không được để trống"
         })
     }
-
+    if(username.length < 4 || username.length > 21) {
+        return res.status(400).json({
+            message: "Username có độ dài từ 5-20 kí tự"
+        })
+    }
+    if(password.length < 4 || password.length > 21) {
+        return res.status(400).json({
+            message: "Password có độ dài từ 5-20 kí tự"
+        })
+    }
     if(password !== password_confirm) {
-        res.json({
-            status: "bad",
+        return res.status(422).json({
             message: "Password không trùng khớp"
         })
     }
 
     const existUser = await User.findOne({ username });
     if(existUser) {
-        res.json({
-            status: "bad",
-            message: "Username đã tồn tại"
-        })
+        return res.status(409)
     }
 
     try {

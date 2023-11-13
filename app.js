@@ -3,13 +3,16 @@ const ApiError = require("./app/api-error")
 const bodyParser = require("body-parser")
 const cors = require("cors")
 const app = express()
-const shopRouter = require('../backend/app/routers/router')
+const userRouter = require('./app/routers/userRoute')
+const productRouter = require('./app/routers/productRouter')
 
 app.use(cors({origin:'https://localhost:3001'}))
 app.use(express.json())
 
 //gui du lieu tu server
-app.use("/sneakershop/auth", shopRouter)
+app.use("/sneakershop/auth", userRouter)
+//app.use("sneakershop/product", productRouter)
+
 app.use((req, res, next) => {
     return next( new ApiError(404, "Resource not found"))
 });
