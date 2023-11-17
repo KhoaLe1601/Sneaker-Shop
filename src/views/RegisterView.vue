@@ -1,7 +1,5 @@
 <template>
-    <div id="app">
-        <Register></Register>
-    </div>
+    
 </template>
 
 <script>

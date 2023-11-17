@@ -1,16 +1,17 @@
 <script>
-import Register from './components/Register.vue';
+import Header from './components/Header.vue';
 
   export default {
     components: {
-      Register,
+      Header,
   },
 }
 </script>
 
 <template>
   <div id="app">
-    <App></App>
+    <Header></Header>
+
     <div class="container mt-3">
       <RouterView></RouterView>
     </div>
