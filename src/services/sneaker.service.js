@@ -1,7 +1,7 @@
 import createApiClient from './api.service'
 
 //lay du lieu tu server
-class ShopService {
+class SneakerService {
     constructor(baseUrl = "/sneakershop/auth") {
         this.api = createApiClient(baseUrl);
     }
@@ -19,4 +19,4 @@ class ShopService {
     }
 }
 
-export default new ShopService();
+export default new SneakerService();

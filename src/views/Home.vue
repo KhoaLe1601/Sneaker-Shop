@@ -1,16 +1,16 @@
 <template>
     <div>
-      <Header />
+      <Header></Header>
       <!-- Nội dung trang chính của bạn -->
     </div>
   </template>
   
   <script>
-  import Header from "@/components/Header.vue";
+  import Register from "@/components/Register.vue";
   
   export default {
     components: {
-      Header,
+      Register,
     },
     // Các phần khác của component
   };

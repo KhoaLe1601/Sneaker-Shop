@@ -1,9 +1,9 @@
 <script>
-import Header from './components/App.vue';
+import Register from './components/Register.vue';
 
   export default {
     components: {
-      App,
+      Register,
   },
 }
 </script>
@@ -18,9 +18,8 @@ import Header from './components/App.vue';
 </template>
 
 <style>
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.page {
+  max-width: 400px;
+  margin: auto;
 }
 </style>

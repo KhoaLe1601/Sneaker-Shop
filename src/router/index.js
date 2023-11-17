@@ -1,11 +1,11 @@
 import { createWebHistory, createRouter } from "vue-router";
-import ContactBook from "../views/ContactBook.vue";
+import Register from "@/views/Register.vue"
 
 const routes = [
     {
         path: '/',
         name: "sneakershop",
-        component: SneakerShop,
+        component: Register,
     },
 ];
 
