@@ -1,18 +1,30 @@
 <template>
     <div>
-      <Header></Header>
-      <!-- Nội dung trang chính của bạn -->
+      
     </div>
-  </template>
+</template>
   
-  <script>
-  import Register from "@/components/Register.vue";
+<script>
+  import Header from '../components/Header.vue';
+  import Body from '../components/Body.vue';
+  import Search from '../components/Search.vue';
+  import Footer from '../components/Footer.vue';
   
   export default {
     components: {
-      Register,
+      Header,
+      Body,
+      Search,
+      Footer,
     },
     // Các phần khác của component
   };
-  </script>
+</script>
+
+<style scoped>
+.page {
+  text-align: left;
+  max-width: 750px;
+}
+</style>
   

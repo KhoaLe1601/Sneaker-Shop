@@ -3,10 +3,10 @@ import Register from "@/views/Register.vue"
 
 const routes = [
     {
-        path: '/',
+        path: "/register",
         name: "sneakershop",
         component: Register,
-    },
+    }
 ];
 
 const router = createRouter({
@@ -14,4 +14,4 @@ const router = createRouter({
     routes,
 });
 
-export default routes;
+export default router;
