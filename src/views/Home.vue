@@ -1,30 +1,13 @@
-<template>
-    <div>
-      
-    </div>
-</template>
-  
 <script>
-  import Header from '../components/Header.vue';
-  import Body from '../components/Body.vue';
-  import Search from '../components/Search.vue';
-  import Footer from '../components/Footer.vue';
-  
-  export default {
-    components: {
-      Header,
-      Body,
-      Search,
-      Footer,
-    },
-    // Các phần khác của component
-  };
+import { RouterView } from 'vue-router';
+export default {
+  components: {
+  }
+}
 </script>
 
-<style scoped>
-.page {
-  text-align: left;
-  max-width: 750px;
-}
-</style>
-  
+<template>
+  <div class="container mt-3">
+    <RouterView></RouterView>
+  </div>
+</template>

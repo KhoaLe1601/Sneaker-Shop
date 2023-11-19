@@ -1,9 +1,9 @@
 <script>
 import Header from './components/Header.vue';
-
+import { RouterView } from 'vue-router';
   export default {
     components: {
-      Header,
+    Header,
   },
 }
 </script>
@@ -11,16 +11,8 @@ import Header from './components/Header.vue';
 <template>
   <div id="app">
     <Header></Header>
-
     <div class="container mt-3">
       <RouterView></RouterView>
     </div>
   </div>
 </template>
-
-<style>
-.page {
-  max-width: 400px;
-  margin: auto;
-}
-</style>
